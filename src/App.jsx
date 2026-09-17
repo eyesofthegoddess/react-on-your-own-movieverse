@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './style.css';
 import SearchPage from './SearchPage';
 import MovieDetail from './MovieDetail';
+import movieIllustration from '/assets/clipart85751.png';
 
 function LandingHome() {
   return (
@@ -15,7 +16,7 @@ function LandingHome() {
             </header>
             <p>We'd like to invite you to use our functional movie search. We hope it makes your movie watching plan go smoothly. Take your time and look around for your favorites.</p>
           </div>
-          <span className="image"><img src="/assets/clipart85751.png" alt="Movieverse Illustration" /></span>
+          <span className="image"><img src={movieIllustration} alt="Movieverse Illustration" /></span>
         </div>
       </section>
 
