@@ -878,3 +878,86 @@ body, #root {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
+
+@media screen and (max-width: 768px) {
+  #nav {
+    border-radius: 12px;
+    padding: 10px;
+    top: 10px;
+    margin-bottom: 25px;
+  }
+
+  #nav ul {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  #nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav ul li a {
+    padding: 12px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+   #nav ul li a.nav-search-btn {
+    margin: 4px 0 !important;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    display: block;
+  }
+
+  .search--container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .search--container input,
+  .search--container select,
+  #main .search--container button,
+  #wrapper .search--container button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box;
+    height: 48px !important;
+    margin: 0 !important;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Transforms the search pill bar into a tight, structured layout grid */
+  #wrapper .search--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Forms a balanced two-column grid */
+    gap: 14px;
+    padding: 24px;
+    max-width: 700px;
+    margin: 20px auto;
+  }
+
+  /* Forces text inputs and sort selectors to span the full width of their grid cell row */
+  #wrapper .search--container input[type="text"] {
+    grid-column: 1 / -1; /* The main text bar takes up the full top row row */
+    width: 100%;
+  }
+
+  /* Standardizes input box heights and margins so nothing floats askew */
+  #wrapper .search--container input,
+  #wrapper .search--container select,
+  #wrapper .search--container button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: 48px !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+}
